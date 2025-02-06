@@ -4,6 +4,8 @@
     --sub-header-color: #D32F2F;
     --text-color: #E0E0E0;
     --border-color: #BDBDBD;
+    --button-color: #00BFA5;
+    --card-item-color: #F8F8F8;
 }
 
 *{
@@ -19,4 +21,5 @@ html{
 body {
     background-color: #121212;
     margin: 0;
+    overflow-x: hidden;
 }

@@ -40,8 +40,10 @@
         </div>
     </div>
     <div class="second-section">
-        <div class="image-fixed">
-            <img src="~/Assets/Images/section2-first.jpg" id="side-image" class="image-section2" />
+        <div class="image-container">
+            <div class="image-fixed">
+                <img src="~/Assets/Images/section2-first.jpg" id="side-image" class="image-section2" />
+            </div>
         </div>
         <div class="second2-container">
             <div class="section2-header-container">
@@ -71,7 +73,7 @@
                 </div>
             </div>
 
-            <div class="dot-separate">
+            <div id="part2" class="dot-separate">
             </div>
 
             <div class="section2-header-container">
@@ -84,7 +86,7 @@
 
             <div class="row">
                 <div class="section2-career-subhead col-lg-3">
-                    <span class="career-box">Kinh nghiệm và trình độ</span>
+                    <p class="career-box">Kinh nghiệm và trình độ</p>
                 </div>
 
                 <div class="section2-text-container col-lg-9">
@@ -108,7 +110,7 @@
             </div>
             <div class="row" style="margin-top: 25px">
                 <div class="section2-career-subhead col-lg-3">
-                    <span class="career-box">Sản phẩm làm nên giá trị</span>
+                    <p class="career-box">Sản phẩm làm nên giá trị</p>
                 </div>
 
                 <div class="section2-text-container col-lg-9">
@@ -122,7 +124,7 @@
                 </div>
             </div>
 
-            <div class="dot-separate">
+            <div id="part3" class="dot-separate">
             </div>
 
             <div class="section2-header-container">
@@ -149,22 +151,80 @@
                     </p>
                 </div>
             </div>
-            <div class="dot-separate">
+            <div id="last-section" class="dot-separate">
             </div>
         </div>
     </div>
     <div class="container third-section">
         <h2 class="section3-header">Kiến thức phong thủy</h2>
         <h4 class="section3-sub-header">Những kiến thức phong thủy dùng trong các lĩnh vực khác nhau, từ đó có thể áp dụng và thực hành trong cuộc sống</h4>
-        <div class="row">
-            <div class="col-lg-8 bg-danger">
-
+        <div class="row w-100">
+            <div class="col-lg-4 d-flex flex-column">
+                <div class="section3-box-choice">
+                    Phong Thủy Văn Phòng & Kinh Doanh
+                </div>
+                <div class="section3-box-choice">
+                    Phong Thủy Bàn Làm Việc
+                </div>
+                <div class="section3-box-choice">
+                    Phong Thủy Sức Khỏe
+                </div>
+                <div class="section3-box-choice">
+                    Phong Thủy Tình Duyên & Hôn Nhân
+                </div>
             </div>
-            <div class="col-lg-4 bg-primary">
-
+            <div class="col-lg-8">
+                <div class="section3-box">
+                    <h3 class="section3-box-title p-5">Phong Thủy Nhà Ở</h3>
+                    <p class="section3-box-text pe-5 ps-5 pb-5"> Phong thủy nhà ở giúp tạo ra không gian sống hài hòa, thu hút tài lộc và cải thiện sức khỏe gia đình. Các yếu tố quan trọng gồm hướng nhà, bố trí nội thất, màu sắc và vật phẩm phong thủy.</p>
+                    <div class="w-100 pe-5 ps-5 pb-5 d-flex justify-content-center">
+                        <img src="~/Assets/Images/section3-1.jpg" class="section3-box-img" />
+                    </div>
+                </div>
             </div>
-
         </div>
+    </div>
+
+    <div class="container forth-section">
+        <div class="section4-box">
+            <p class="section4-text">Bạn có hứng thú với phong thủy? Hãy liên hệ ngay với chúng tôi</p>
+            <button class="section4-button">
+                Kết nối ngay
+            </button>
+        </div>
+    </div>
+
+    <div class="container fifth-section">
+        <div class="row justify-content-around">
+            <div class="col-lg-3 card-item">
+                <i class="fa-solid fa-phone-volume card-icon"></i>
+                <h3 class="card-item-header">Hotline</h3>
+                <p class="card-item-text">Sẵn sàng lắng nghe và hỗ trợ mọi khi bạn cần</p>
+                <p class="card-item-text">0798680121</p>
+            </div>
+            <div class="col-lg-3 card-item">
+                <i class="fa-solid fa-map-location-dot card-icon"></i>
+                <h3 class="card-item-header">Địa chỉ</h3>
+                <p class="card-item-text">88 Nguyễn Văn Quỳ, Phú thuận, Quận 7, Thành phố Hồ Chí Minh</p>
+                <p class="card-item-text"></p>
+            </div>
+            <div class="col-lg-3 card-item">
+                <i class="fa-solid fa-envelope-circle-check card-icon"></i>
+                <h3 class="card-item-header">Thứ 2 - Thứ 7</h3>
+                <p class="card-item-text"> Tôi luôn sẵn sàng lắng nghe và hỗ trợ</p>
+                <p class="card-item-text">nhatdo@gmail.com</p>
+            </div>
+        </div>
+        @*<form class="w-100 mt-10">
+            <div class="row">
+                <div class="col-lg-6">
+                    <input class="form-control w-75" placeholder="Họ và tên" />
+                </div>
+                <div class="col-lg-6">
+                    <input class="form-control" placeholder="Số điện thoại" />
+                </div>
+            </div>
+        </form>*@
     </div>
     @*<section class="row" aria-labelledby="aspnetTitle">
             <h1 id="title">ASP.NET</h1>
