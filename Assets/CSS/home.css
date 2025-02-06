@@ -1,0 +1,23 @@
+﻿.main-container{
+    min-height: 1500px;
+    width: 100%;
+}
+
+.first-section {
+    background: url("../Images/section1-background3.jpg") no-repeat fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.first-section::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.4;
+    z-index:2;
+}
