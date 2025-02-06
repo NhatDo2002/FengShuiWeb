@@ -1,4 +1,22 @@
-﻿body {
+﻿:root {
+    --main-color: #121212;
+    --header-color: #FFD700;
+    --sub-header-color: #D32F2F;
+    --text-color: #E0E0E0;
+    --border-color: #BDBDBD;
+}
+
+*{
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5% !important;
+    line-height: 1.6rem !important;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
     background-color: #121212;
     margin: 0;
 }
