@@ -129,6 +129,7 @@
   <ItemGroup>
     <Content Include="Assets\CSS\home.css" />
     <Content Include="Assets\CSS\main.css" />
+    <Content Include="Assets\JS\home.js" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -183,7 +184,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Assets\Images\" />
-    <Folder Include="Assets\JS\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
