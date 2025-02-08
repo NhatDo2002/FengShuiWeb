@@ -1,4 +1,33 @@
-﻿var arrayImg = [
+﻿var arrayContent = [
+    {
+        name: "Phong Thủy Nhà Ở",
+        des: "Phong thủy nhà ở giúp tạo ra không gian sống hài hòa, thu hút tài lộc và cải thiện sức khỏe gia đình. Các yếu tố quan trọng gồm hướng nhà, bố trí nội thất, màu sắc và vật phẩm phong thủy.",
+        img: "/Assets/Images/section3-1.jpg"
+    },
+    {
+        name: "Phong Thủy Văn Phòng & Kinh Doanh",
+        des: "Áp dụng phong thủy trong văn phòng giúp tăng hiệu suất làm việc, thúc đẩy tài lộc và sự phát triển bền vững của doanh nghiệp. Các yếu tố quan trọng gồm vị trí bàn làm việc, hướng cửa chính và cách sắp xếp không gian.",
+        img: "/Assets/Images/section3-2.jpg"
+    },
+    {
+        name: "Phong Thủy Bàn Làm Việc",
+        des: "Sắp xếp bàn làm việc theo phong thủy giúp tăng cường sự tập trung, sáng tạo và thu hút vận may trong công việc. Yếu tố quan trọng gồm hướng ngồi, cách bài trí vật dụng và cây xanh phong thủy..",
+        img: "/Assets/Images/section3-3.jpg"
+    },
+    {
+        name: "Phong Thủy Sức Khỏe",
+        des: "Phong thủy có thể giúp cải thiện sức khỏe bằng cách cân bằng năng lượng trong không gian sống. Việc tối ưu ánh sáng, không khí lưu thông và sử dụng màu sắc phù hợp có thể giúp tăng cường sức khỏe thể chất và tinh thần.",
+        img: "/Assets/Images/section3-4.jpg"
+    },
+    {
+        name: "Phong Thủy Tình Duyên & Hôn Nhân",
+        des: "Phong thủy có thể ảnh hưởng đến đường tình duyên và hạnh phúc gia đình. Việc sử dụng các vật phẩm như hồ lô, cặp uyên ương hoặc bố trí phòng ngủ đúng phong thủy có thể giúp cải thiện mối quan hệ và giữ gìn hạnh phúc.",
+        img: "/Assets/Images/section3-5.jpg"
+    },
+
+]
+
+var arrayImg = [
     {
         src: "/Assets/Images/section2-first.jpg"
     },
@@ -47,19 +76,72 @@ $(document).ready(function () {
 
     var headerPart2 = $("#part2");
     var headerPart3 = $("#part3");
+    var headerPart4 = $("#last-section");
+    var headerPart1 = $("#part1");
+    var headerPart5 = $("#part5");
 
 
     $(window).on("scroll", function () {
+        var getNavLi = $(".item-nav");
         var headerPart2Top = headerPart2.offset().top;
         var headerPart3Top = headerPart3.offset().top;
+        var headerPart1Top = headerPart1.offset().top;
+        var headerPart4Top = headerPart4.offset().top;
+        var headerPart5Top = headerPart5.offset().top;
         var scrollTop = $(window).scrollTop();
-        if (scrollTop >= headerPart2Top && scrollTop < headerPart3Top) {
-            $($image).attr("src",arrayImg[1].src);
-        } else if (scrollTop >= headerPart3Top) {
-            $($image).attr("src", arrayImg[2].src);
-        } else {
+        if (scrollTop >= headerPart1Top && scrollTop < headerPart2Top) {
+            $(".item-nav").removeClass("active");
+            $(getNavLi[0]).addClass("active");
             $($image).attr("src", arrayImg[0].src);
+        } else if (scrollTop >= headerPart2Top && scrollTop < headerPart3Top) {
+            $(".item-nav").removeClass("active");
+            $(getNavLi[1]).addClass("active");
+            $($image).attr("src", arrayImg[1].src);
+        } else if (scrollTop >= headerPart3Top && scrollTop < headerPart4Top) {
+            $(".item-nav").removeClass("active");
+            $(getNavLi[2]).addClass("active");
+            $($image).attr("src", arrayImg[2].src);
+        } else if (scrollTop >= headerPart4Top && scrollTop < headerPart5Top - 100) {
+            $(".item-nav").removeClass("active");
+            $(getNavLi[3]).addClass("active");
+        } else if (scrollTop >= headerPart5Top - 100) {
+            $(".item-nav").removeClass("active");
+            $(getNavLi[4]).addClass("active");
+        } else {
+            $(".item-nav").removeClass("active");
+        }
+    });
+
+    var introSection = $('.first-section'); // Chọn thẻ div cao 100vh
+    var navbar = $('#navbar'); // Chọn navbar
+
+    $(window).scroll(function () {
+        var introBottom = introSection.offset().top + introSection.outerHeight(); // Vị trí dưới cùng của intro
+        var scrollTop = $(window).scrollTop(); // Lấy vị trí cuộn hiện tại
+
+        if (scrollTop >= introBottom) {
+            navbar.addClass('fixed-nav'); // Thêm class fixed khi cuộn qua phần intro
+        } else {
+            navbar.removeClass('fixed-nav'); // Xóa class fixed khi cuộn lên lại
         }
     });
 });
+
+$(".box-click").on("click", function () {
+    $(".box-click").removeClass("active");
+    var getIndex = $(this).data("index");
+    var getItem = arrayContent[getIndex];
+
+    $("#knowledge-container").data("index", getIndex);
+    $("#header-knowlegde").text(getItem.name);
+    $("#header-description").text(getItem.des);
+    $("#header-img").attr("src", getItem.img);
+
+    $(this).addClass("active");
+})
+
+$(".item-nav").on("click", function () {
+    $(".item-nav").removeClass("active");
+    $(this).addClass("active");
+})
 
