@@ -124,7 +124,7 @@
 }
 
 .section2-header {
-    font-size: 4.8rem;
+    font-size: 3.8rem;
     color: var(--header-color);
     padding-bottom: 15px;
     font-weight: bold;
@@ -160,15 +160,15 @@
 }
 
 .section2-content-container {
-    margin: 55px;
     width: 100%;
+    margin: 55px;
     display: flex;
     flex-direction: row;
 }
 
 .image-content-container {
     width: 30%;
-    height: 600px;
+    height: 450px;
 }
 
 .second2-container{
@@ -203,8 +203,17 @@
     margin-top: 25px;
 }
 
+.section2-des-text-no-margin {
+    font-size: 2.4rem;
+    color: var(--text-color);
+}
+
 .name {
-    color: var(--sub-header-color);
+    background-color: var(--sub-header-color);
+    padding: 10px;
+    border-radius: 5px;
+    color: black;
+    
 }
 
 .dot-separate {
@@ -233,6 +242,31 @@
     margin-left: 55px;
     font-size: 2.4rem;
     font-weight: bold;
+    align-items: center;
+}
+
+.align-center{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.image-container-section2 {
+    width: 34%;
+    height: 460px;
+}
+
+.image-container-section2-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.image-container-section2-box {
+    margin-left: 55px;
+    margin-right: 10px;
 }
 
 .career-box {
@@ -240,6 +274,7 @@
     padding: 10px;
     border: 1px solid var(--sub-header-color);
     border-radius: 10px;
+    text-align: center;
 }
 
 .list-item {
@@ -274,11 +309,16 @@
 /*sửa*/
 .section3-sub-header {
     font-size: 2.4rem;
-    color: var(--sub-header-color);
-    padding-bottom: 20px;
+    color: var(--text-color);
     max-width: 800px;
     margin: 0 auto;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.background-around{
+    background-color: black;
+    padding: 0px 10px;
+    border-radius: 5px;
 }
 
 .stop-image {
@@ -344,6 +384,9 @@
         color: white;
     }
 
+.second-last-section{
+
+}
 /* Keyframe animation chuyển border từ solid sang dashed */
 @keyframes borderTransition {
     0% {
@@ -504,8 +547,43 @@
     z-index: 1000;
 }
 
+.benefit-container{
+    width: 40%;
+    height: fit-content;
+}
+
+.benefit-container-column{
+    flex-direction: column !important;
+}
+
+.benefit-name-text {
+    font-size: 2.6rem;
+    color: var(--text-color);
+    font-weight: bold;
+    text-align: center;
+    
+}
+
+.margin-top-benefit{
+    margin-top: 55px;
+}
+
+.box-background {
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px
+}
+
+.dot-separate-last {
+    border: 2px dashed var(--border-color);
+    opacity: 0.8;
+    margin: 55px 0px;
+    width: 100%;
+}
 /* Tablet (768px - 991px) */
 @media (max-width: 991.98px) {
+    
+
     .text-container {
         text-align: center;
         border-right: none;
@@ -540,9 +618,10 @@
     .section2-header-container {
         margin: 40px auto;
         text-align: center;
+        text-transform: uppercase;
     }
 
-    .section2-content-container {
+    .section2-content-container{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -597,7 +676,7 @@
     }
 
     .section3-box-title {
-        font-size: 2.8rem;
+        font-size: 1.8rem;
     }
 
     .section3-box-text {
@@ -610,6 +689,30 @@
 
     .card-item {
         width: 70%;
+    }
+
+    .margin-input{
+        margin-top: 1rem !important;
+    }
+
+    .benefit-container {
+        width: 100%;
+        height: fit-content;
+        margin-bottom: 1rem;
+    }
+
+    .image-container-section2-box{
+        display: none;
+    }
+
+    .margin-top-benefit {
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .benefit-container {
+        width: 45%; /* Giảm kích thước trên tablet */
     }
 }
 
@@ -643,11 +746,21 @@
     }
 
     .section2-name-text {
-        font-size: 3.4rem;
+        font-size: 2.0rem;
     }
 
     .section2-des-text {
-        font-size: 2.4rem;
+        font-size: 1.4rem; /* Đảm bảo dễ đọc */
+        text-align: center;
+    }
+
+    .section2-des-text-no-margin {
+        font-size: 1.4rem; /* Đảm bảo dễ đọc */
+        text-align: center; 
+    }
+
+    .career-box {
+        font-size: 2.0rem;
     }
 
     .section2-career-subhead {
@@ -678,7 +791,7 @@
     }
 
     .section3-box-title {
-        font-size: 2.4rem;
+        font-size: 1.8rem;
     }
 
     .section3-box-text {
@@ -723,6 +836,25 @@
         font-size: 1.4rem;
         padding: 0.8rem 1.8rem;
     }
+
+    .benefit-container {
+        width: 90%; /* Trải rộng trên thiết bị nhỏ */
+        margin-bottom: 30px;
+    }
+
+    .benefit-name-text {
+        font-size: 2rem; /* Giảm kích thước chữ */
+    }
+
+    .benefit-container img {
+        width: 100%; /* Ảnh tự điều chỉnh kích thước */
+        height: auto;
+    }
+
+    .box-background {
+        padding: 6px; /* Giảm padding hơn để không chiếm quá nhiều diện tích */
+        border-radius: 3px; /* Làm gọn góc bo tròn */
+    }
 }
 
 /* Điện thoại nhỏ (dưới 576px) */
@@ -736,7 +868,7 @@
     }
 
     .section2-header {
-        font-size: 3.2rem;
+        font-size: 2.6rem;
     }
 
     .section2-sub-header {
@@ -744,11 +876,8 @@
     }
 
     .section2-name-text {
-        font-size: 3rem;
-    }
-
-    .section2-des-text {
-        font-size: 2.2rem;
+        margin-top: 20px;
+        font-size: 2.0rem;
     }
 
     .section2-career-subhead {
@@ -787,6 +916,22 @@
     .btn-register {
         font-size: 1.2rem;
         padding: 0.6rem 1.5rem;
+    }
+
+    .benefit-name-text {
+        font-size: 1.8rem;
+    }
+
+    .benefit-container {
+        width: 100%;
+    }
+
+    .section2-des-text {
+        font-size: 1.2rem;
+    }
+
+    .box-background {
+        padding: 0px 10px;
     }
 }
 

@@ -133,6 +133,8 @@
     <Content Include="Assets\Images\background2.jpg" />
     <Content Include="Assets\Images\background3.jpg" />
     <Content Include="Assets\Images\background4.jpg" />
+    <Content Include="Assets\Images\background5.jpg" />
+    <Content Include="Assets\Images\background6.jpg" />
     <Content Include="Assets\Images\mrdavis.png" />
     <Content Include="Assets\Images\section1-background.jpg" />
     <Content Include="Assets\Images\section1-background2.jpg" />
